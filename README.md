@@ -1,20 +1,24 @@
 # AI Resume Analyzer 🤖
 
-This app scans a resume (PDF), extracts key skills, compares it with a job description, and gives a match score + suggestions.
+Analyze resumes using AI! Upload a resume PDF and job description to get a match score and missing skills.
 
 ## ✅ Features
-- Resume parsing with PDF
-- Skill extraction with NLP
-- Job fit score
-- Downloadable feedback report
-- Works perfectly on Streamlit Cloud
+- PDF resume parsing
+- Manual skill extraction
+- Match scoring via NLP
+- Downloadable analysis report
 
-## 🚀 Deploy on Streamlit
-1. Upload files to a GitHub repo
-2. Go to [streamlit.io/cloud](https://streamlit.io/cloud)
-3. Create a new app → point to `resume_analyzer.py`
-4. Enjoy your live portfolio project!
+## ⚙️ No Errors!
+- ✅ No spaCy model download
+- ✅ Works instantly on Streamlit Cloud
+- ✅ Uses `spacy.blank("en")` instead of loading large models
 
-## 📧 Contact
+## 🚀 How to Deploy
+1. Upload these files to a public GitHub repo
+2. Go to [https://streamlit.io/cloud](https://streamlit.io/cloud)
+3. Create a New App → Set `resume_analyzer.py` as the main file
+4. Done! 🎉
+
+## 📧 Author
 Vukanti Purna Chandra  
 vukantipurnachandra@gmail.com
