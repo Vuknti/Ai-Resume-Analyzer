@@ -1,17 +1,12 @@
 import fitz  # PyMuPDF
 import streamlit as st
 import spacy
-from spacy.cli import download
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import base64
 
-# ✅ Streamlit-safe way to ensure spaCy model is available
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
+# ✅ Uses lightweight English NLP without model download
+nlp = spacy.blank("en")
 
 skill_keywords = ['python', 'java', 'sql', 'machine learning', 'deep learning', 'data analysis',
                   'tensorflow', 'communication', 'leadership', 'problem solving', 'teamwork']
@@ -78,3 +73,4 @@ if st.button("Analyze"):
         st.markdown(create_download_button(report), unsafe_allow_html=True)
     else:
         st.error("Please upload a resume and paste the job description.")
+
